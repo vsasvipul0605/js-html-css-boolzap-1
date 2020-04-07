@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* sfondo ---------------*/
+.fascia-verde{
+  height: 20vh;
+  background-color: darkgreen;
+}
+.fascia-grigia{
+ height: 80vh;
+ background-color: lightgrey;
+}
+/* container -----------------------------*/
+.container{
+  position: absolute;
+  height: 90vh;
+  width: 70%;
+  display: flex;
+  background-color: red;
+  top: 5vh;
+  left: 15%;
+}
+/* sez-sx ----------------------------*/
+.sez-sx{
+ width: 30%;
+ display: flex;
+ flex-direction: column;
+ background-color: blue;
+}
+.notifiche{
+ height: 50px;
+ background-color: lightblue;
+}
+.cerca-contatti{
+  height: 30px;
+  background-color: lime;
+}
+.container-contatti{
+  height: calc(100% - 130px);
+  overflow: auto;
+}
+.contatto{
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid red;
+}
+/* sez-dx ------------------------------------*/
+.sez-dx{
+ width: 70%;
+ display: flex;
+ flex-direction: column;
+ background-color: yellow;
+}
+.fascia-superiore{
+ height: 50px;
+ background-color: black;
+}
+.display-messaggi{
+ height: calc(100% - 100px);
+ overflow: auto;
+ background-color: brown;
+ padding: 20px;
+}
+.p-msg{
+  min-width: 100px;
+  max-width: 220px;
+  height: auto;
+}
+.messaggio-ricevuto{
+ height: auto;
+
+ width: auto;
+ max-width: 200px;
+ background-color: white;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 5px;
+}
+.messaggio-inviato{
+  height: auto;
+
+  width: auto;
+  max-width: 200px;
+  background-color: lime;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: calc(100% - 205px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.input-messaggi{
+  height: 50px;
+  background-color: black;
+}
