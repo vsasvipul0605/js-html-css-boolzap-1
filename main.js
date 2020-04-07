@@ -7,9 +7,10 @@ $(".plane").click(
       $(".display-messaggi").append("<div class='messaggio-inviato'><p class='p-msg'>" + msg + "</p></div>");
       $(".input-msg-txt").val("");
     }
-
   }
 )
+
+
 // evidenziare il contatto selezionato----------------
 $(".contatto").click(
   function () {

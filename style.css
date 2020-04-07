@@ -112,7 +112,6 @@ img{
 }
 .messaggio-ricevuto{
  height: auto;
- width: auto;
  max-width: 200px;
  background-color: white;
  margin-top: 5px;
@@ -124,9 +123,9 @@ img{
  text-align: center;
 }
 
+
 .messaggio-inviato{
   height: auto;
-  width: auto;
   max-width: 200px;
   background-color: lime;
   margin-top: 5px;
@@ -138,6 +137,7 @@ img{
   padding: 5px;
   text-align: center;
 }
+
 
 .input-messaggi{
   height: 50px;
