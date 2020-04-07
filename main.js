@@ -1,6 +1,6 @@
 
 // aggiunta del messaggio digitato nel display quando clicco l'aereo
-$(".fa-paper-plane").click(
+$(".plane").click(
   function () {
     var msg = $(".input-msg-txt").val();
     if (msg != "") {
@@ -28,5 +28,5 @@ $(".input-msg-txt").focusout(
 function send() {
   setTimeout(function(){
     $(".plane").css("display", "none");
-    $(".fa-microphone").css("display", "block"); }, 200);
+    $(".fa-microphone").css("display", "block"); }, 300);
 }

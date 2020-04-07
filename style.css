@@ -150,10 +150,19 @@ img{
   width: 80%;
   height: 80%;
 }
-
+.input-msg-txt:focus{
+  width: 80%;
+  height: 80%;
+  margin-left: 20px;
+}
 .fa-paper-plane:hover{
   cursor: pointer;
 }
 .plane{
   display: none;
+  margin-left: 20px;
+  padding: 5px;
+}
+.fa-smile{
+  margin-left: 20px;
 }
