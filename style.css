@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+img{
+  width: 35px;
+  height: auto;
+  border-radius: 100%;
+  margin-right: 5px;
+}
 /* sfondo ---------------*/
 .fascia-verde{
   height: 20vh;
@@ -18,25 +24,43 @@
   height: 90vh;
   width: 70%;
   display: flex;
-  background-color: red;
   top: 5vh;
   left: 15%;
 }
+
 /* sez-sx ----------------------------*/
 .sez-sx{
  width: 30%;
  display: flex;
  flex-direction: column;
- background-color: blue;
 }
+
 .notifiche{
  height: 50px;
  background-color: lightblue;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ padding: 0 15px;
+}
+.fa-bell{
+  margin-right: 5px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 100%;s
 }
 .cerca-contatti{
   height: 30px;
-  background-color: lime;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+.input-contatti{
+ width: 80%;
+ height: 90%;
+}
+
 .container-contatti{
   height: calc(100% - 130px);
   overflow: auto;
@@ -46,23 +70,39 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid red;
+  background-color: white;
+}
+.contatto:hover{
+  cursor: pointer;
+}
+.contatto-attivo-bg{
+  background-color: lightgrey;
 }
 /* sez-dx ------------------------------------*/
 .sez-dx{
  width: 70%;
  display: flex;
  flex-direction: column;
- background-color: yellow;
 }
+
 .fascia-superiore{
  height: 50px;
- background-color: black;
+ display: flex;
+ padding: 0 15px;
+ justify-content: space-between;
+ align-items: center;
+ background-color: lightgrey;
+}
+
+.fascia-sup-utente{
+  display: flex;
+  align-items: center;
 }
 .display-messaggi{
  height: calc(100% - 100px);
  overflow: auto;
- background-color: brown;
+ background-image: url("immagini/sfondo.jpg");
+ background-size: cover;
  padding: 20px;
 }
 .p-msg{
@@ -72,7 +112,6 @@
 }
 .messaggio-ricevuto{
  height: auto;
-
  width: auto;
  max-width: 200px;
  background-color: white;
@@ -82,10 +121,11 @@
  align-items: center;
  justify-content: center;
  padding: 5px;
+ text-align: center;
 }
+
 .messaggio-inviato{
   height: auto;
-
   width: auto;
   max-width: 200px;
   background-color: lime;
@@ -96,8 +136,24 @@
   align-items: center;
   justify-content: center;
   padding: 5px;
+  text-align: center;
 }
+
 .input-messaggi{
   height: 50px;
-  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(250, 255, 237);
+}
+.input-msg-txt{
+  width: 80%;
+  height: 80%;
+}
+
+.fa-paper-plane:hover{
+  cursor: pointer;
+}
+.plane{
+  display: none;
 }
