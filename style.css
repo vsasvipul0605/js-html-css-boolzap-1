@@ -64,6 +64,7 @@ img{
 .container-contatti{
   height: calc(100% - 130px);
   overflow: auto;
+  background-color: white;
 }
 .contatto{
   height: 60px;

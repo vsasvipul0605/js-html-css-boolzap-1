@@ -6,6 +6,10 @@ $(".plane").click(
     if (msg != "") {
       $(".display-messaggi").append("<div class='messaggio-inviato'><p class='p-msg'>" + msg + "</p></div>");
       $(".input-msg-txt").val("");
+      // messaggio di risposta statico----------------
+      setTimeout(function(){
+       $(".display-messaggi").append("<div class='messaggio-ricevuto'><p class='p-msg'>" + "ciao" + "</p></div>");
+         }, 1000);
     }
   }
 )
@@ -31,3 +35,23 @@ function send() {
     $(".plane").css("display", "none");
     $(".fa-microphone").css("display", "block"); }, 300);
 }
+
+// ricerca dei contatti---------------------------
+
+ $(".input-contatti").keyup(function () {
+
+   $(".contatto").each(function () {
+     var contattoCercato = $(".input-contatti").val();
+     var contattoCercatoMin = contattoCercato.toLowerCase();
+     var h4 = $(this).find("h4");
+     var nome = h4.text();
+     var nomeMin = nome.toLowerCase();
+
+     if (!nomeMin.includes(contattoCercatoMin)) {
+       $(this).css("display", "none");
+     }
+     else {
+       $(this).css("display", "flex");
+     }
+   })
+ })
