@@ -11,6 +11,11 @@ $(".plane").click(
       setTimeout(function(){
        $(".display-messaggi.active").append("<div class='messaggio-ricevuto'><span class='p-msg'>" + "ciao" +
        "</span> <div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div></div>");
+       // modifico l'ora nel contatto in base allultimo msg spedito
+       var d = new Date();
+       var ora = d.getHours().toString();
+       var minuti = d.getMinutes().toString();
+       $(".contatto-attivo-bg").find("span").text(ora + ":" + minuti);
          }, 1000);
     }
   }
