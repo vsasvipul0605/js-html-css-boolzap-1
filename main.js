@@ -4,22 +4,32 @@ $(".plane").click(
   function () {
     var msg = $(".input-msg-txt").val();
     if (msg != "") {
-      $(".display-messaggi.active").append("<div class='messaggio-inviato'><span class='p-msg'>" + msg +
+      // modifico l'ora nel contatto in base allultimo msg spedito
+      var d = new Date();
+      var ora = d.getHours().toString();
+      var minuti = d.getMinutes().toString();
+      $(".display-messaggi.active").append("<div class='messaggio-inviato'>" + msg + "<span class='ora'>" + ora + ":" + minuti + "</span>" +
       "</span> <div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div></div>");
       $(".input-msg-txt").val("");
+      // mentre aspetto la risposta appare sta scrivendo... nella fascia sup----------------
+      $(".fascia-sup-utente").find("h6").text("sta scrivendo...");
       // messaggio di risposta statico----------------
       setTimeout(function(){
-       $(".display-messaggi.active").append("<div class='messaggio-ricevuto'><span class='p-msg'>" + "ciao" +
+
+       $(".display-messaggi.active").append("<div class='messaggio-ricevuto'><span class='p-msg'>" + "ciao" + "<span class='ora'>" + ora + ":" + minuti + "</span>" +
        "</span> <div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div></div>");
-       // modifico l'ora nel contatto in base allultimo msg spedito
-       var d = new Date();
-       var ora = d.getHours().toString();
-       var minuti = d.getMinutes().toString();
+
        $(".contatto-attivo-bg").find("span").text(ora + ":" + minuti);
-         }, 1000);
-    }
-  }
+       // riporto la scritta originaria nella fascia sup------------
+       $(".fascia-sup-utente").find("h6").text($(".contatto-attivo-bg").find("h6").text());
+     }, 1000);
+   }
+ }
 )
+
+
+
+
 
 
 
@@ -33,6 +43,7 @@ $(".contatto").click(
     $(".display-messaggi").eq(indexContatto).siblings().removeClass("active");
     // cambio utente nella fascia superiore--------------------
     $(".fascia-sup-utente").find("h4").text($(this).find("h4").text());
+    $(".fascia-sup-utente").find("h6").text($(this).find("h6").text());
     $(".fascia-sup-utente").find("img").attr("src",$(this).find("img").attr("src"));
   }
 )
