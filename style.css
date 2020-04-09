@@ -105,6 +105,10 @@ img{
  background-image: url("immagini/sfondo.jpg");
  background-size: cover;
  padding: 20px;
+ display: none;
+}
+.active{
+  display: block;
 }
 .p-msg{
   min-width: 100px;
@@ -117,9 +121,6 @@ img{
  background-color: white;
  margin-top: 5px;
  margin-bottom: 5px;
- display: flex;
- align-items: center;
- justify-content: center;
  padding: 5px;
  text-align: center;
 }
@@ -132,12 +133,10 @@ img{
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: calc(100% - 205px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 5px;
   text-align: center;
 }
+
 
 
 .input-messaggi{
@@ -166,4 +165,23 @@ img{
 }
 .fa-smile{
   margin-left: 20px;
+}
+/* messaggi e menu tendina-----------------------*/
+.freccina{
+  display: none;
+}
+.messaggio-inviato:hover .freccina{
+  display: inline-block;
+  cursor: pointer;
+}
+.messaggio-ricevuto:hover .freccina{
+  display: inline-block;
+  cursor: pointer;
+}
+.menu-tendina{
+  display: none;
+  background-color: white;
+}
+.menu-tendina:hover{
+  cursor: pointer;
 }

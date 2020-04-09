@@ -4,22 +4,28 @@ $(".plane").click(
   function () {
     var msg = $(".input-msg-txt").val();
     if (msg != "") {
-      $(".display-messaggi").append("<div class='messaggio-inviato'><p class='p-msg'>" + msg + "</p></div>");
+      $(".display-messaggi.active").append("<div class='messaggio-inviato'><span class='p-msg'>" + msg +
+      "</span> <div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div></div>");
       $(".input-msg-txt").val("");
       // messaggio di risposta statico----------------
       setTimeout(function(){
-       $(".display-messaggi").append("<div class='messaggio-ricevuto'><p class='p-msg'>" + "ciao" + "</p></div>");
+       $(".display-messaggi.active").append("<div class='messaggio-ricevuto'><span class='p-msg'>" + "ciao" +
+       "</span> <div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div></div>");
          }, 1000);
     }
   }
 )
 
 
-// evidenziare il contatto selezionato----------------
+
+// evidenziare il contatto selezionato e selezionare la relativa chat----------------
 $(".contatto").click(
   function () {
     $(this).addClass("contatto-attivo-bg");
     $(this).siblings().removeClass("contatto-attivo-bg");
+    var indexContatto = $(this).index();
+    $(".display-messaggi").eq(indexContatto).addClass("active");
+    $(".display-messaggi").eq(indexContatto).siblings().removeClass("active");
   }
 )
 // cambio icona da microfono a aereo-----------------------
@@ -55,3 +61,18 @@ function send() {
      }
    })
  })
+
+ // menu per cancellare messaggio-------------
+ $( ".display-messaggi" ).on( "click", ".menu-tendina", function( ) {
+    $(this).parent().hide();
+ });
+ $( ".display-messaggi" ).on( "click", ".freccina", function( ) {
+    $(this).siblings(".menu-tendina").toggle();
+ });
+ // il menu a tendina si chiude quando il mouse esce dal messaggio
+ $( ".display-messaggi" ).on( "mouseleave", ".messaggio-inviato", function( ) {
+    $(this).find(".menu-tendina").hide();
+ });
+ $( ".display-messaggi" ).on( "mouseleave", ".messaggio-ricevuto", function( ) {
+    $(this).find(".menu-tendina").hide();
+ });
