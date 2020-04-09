@@ -26,6 +26,9 @@ $(".contatto").click(
     var indexContatto = $(this).index();
     $(".display-messaggi").eq(indexContatto).addClass("active");
     $(".display-messaggi").eq(indexContatto).siblings().removeClass("active");
+    // cambio utente nella fascia superiore--------------------
+    $(".fascia-sup-utente").find("h4").text($(this).find("h4").text());
+    $(".fascia-sup-utente").find("img").attr("src",$(this).find("img").attr("src"));
   }
 )
 // cambio icona da microfono a aereo-----------------------
