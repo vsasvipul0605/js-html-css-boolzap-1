@@ -1,5 +1,5 @@
-
-// aggiunta del messaggio digitato nel display quando clicco l'aereo
+$( document ).ready(function() {
+  // aggiunta del messaggio digitato nel display quando clicco l'aereo
 $(".plane").click(
   function () {
     var msg = $(".input-msg-txt").val();
@@ -53,9 +53,9 @@ $(".input-msg-txt").focus(function(){
   $(".fa-microphone").css("display", "none");
 });
 $(".input-msg-txt").focusout(
-  send
+  hideplane
 );
-function send() {
+function hideplane() {
   setTimeout(function(){
     $(".plane").css("display", "none");
     $(".fa-microphone").css("display", "block"); }, 300);
@@ -95,3 +95,4 @@ function send() {
  $( ".display-messaggi" ).on( "mouseleave", ".messaggio-ricevuto", function( ) {
     $(this).find(".menu-tendina").hide();
  });
+});

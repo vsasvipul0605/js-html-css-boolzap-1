@@ -110,11 +110,8 @@ img{
 .active{
   display: block;
 }
-.p-msg{
-  min-width: 100px;
-  max-width: 220px;
-  height: auto;
-}
+
+
 .messaggio-ricevuto{
  height: auto;
  max-width: 200px;
@@ -173,6 +170,7 @@ img{
 .freccina{
   display: none;
 }
+
 .messaggio-inviato:hover .freccina{
   display: inline-block;
   cursor: pointer;
