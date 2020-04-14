@@ -113,7 +113,7 @@ img{
 
 
 .messaggio-ricevuto{
-  max-width: 100px;
+  width: 100px;
   background-color: white;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -126,7 +126,7 @@ img{
 
 
 .messaggio-inviato{
-  max-width: 100px;
+  width: 100px;
   background-color: lime;
   margin-top: 5px;
   margin-bottom: 5px;
