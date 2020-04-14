@@ -138,8 +138,8 @@ img{
 }
 
 .ora{
-  font-size: 10px;
-  margin-left:
+  font-size: 9px;
+  text-align: right;
 }
 
 
@@ -173,6 +173,7 @@ img{
 /* messaggi e menu tendina-----------------------*/
 .freccina{
   display: none;
+  font-size: 12px;
 }
 
 .messaggio-inviato:hover .freccina{

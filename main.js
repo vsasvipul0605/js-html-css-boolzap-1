@@ -8,16 +8,16 @@ $(".plane").click(
       var d = new Date();
       var ora = d.getHours().toString();
       var minuti = d.getMinutes().toString();
-      $(".display-messaggi.active").append("<div class='messaggio-inviato'>" + msg + "<span class='ora'>" + ora + ":" + minuti + "</span>" +
-      "</span> <div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div></div>");
+      $(".display-messaggi.active").append("<div class='messaggio-inviato'>" + msg +
+      "<div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div><div class='ora'>" + ora + ":" + minuti + "</div></div>");
       $(".input-msg-txt").val("");
       // mentre aspetto la risposta appare sta scrivendo... nella fascia sup----------------
       $(".fascia-sup-utente").find("h6").text("sta scrivendo...");
       // messaggio di risposta statico----------------
       setTimeout(function(){
 
-       $(".display-messaggi.active").append("<div class='messaggio-ricevuto'><span class='p-msg'>" + "ciao" + "<span class='ora'>" + ora + ":" + minuti + "</span>" +
-       "</span> <div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div></div>");
+       $(".display-messaggi.active").append("<div class='messaggio-ricevuto'>" + "ciao" +
+       "<div class='freccina'><i class='fas fa-chevron-down'></i></div> <div class='menu-tendina'><span>Cancella messaggio</span></div><div class='ora'>" + ora + ":" + minuti + "</div></div>");
 
        $(".contatto-attivo-bg").find("span").text(ora + ":" + minuti);
        // riporto la scritta originaria nella fascia sup------------
